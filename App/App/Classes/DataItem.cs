@@ -8,9 +8,7 @@ namespace App.Classes
 {
     class DataItem<T>
     {
-        #region Конструкторы
-        public DataItem() { }
-
+        #region Конструктор
         public DataItem(T[] input, T[] output)
         {
             Input = input;

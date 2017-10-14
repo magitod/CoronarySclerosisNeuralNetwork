@@ -11,19 +11,26 @@ namespace App.Classes
     {
         private double[] lastOutput;
 
+        #region Свойства
+        public int CountNeurons { get; }
         public double[] LastOutput { get { return lastOutput; } }
         public INeuron[] Neurons { get; }
         public int InputDimension { get; }
+        #endregion
 
+        #region Конструкторы
         public Layer(int countNeuron, int countInputs)
         {
-            Neurons = new Neuron[countNeuron];
+            CountNeurons = countNeuron;
+            Neurons = new Neuron[CountNeurons];
             for (int i = 0; i < countNeuron; i++)
             {
-                Neurons[i] = new Neuron(countInputs);
+                Neurons[i] = new Neuron(countInputs, new SigmoidFunction());
             }
         }
+        #endregion
 
+        #region Функции
         public double[] compute(double[] inputVector)
         {
             double[] outputVector = new double[Neurons.Length];
@@ -36,6 +43,7 @@ namespace App.Classes
 
             return LastOutput;
         }
+        #endregion
 
     }
 }

@@ -18,5 +18,8 @@ namespace App.Interfaces
 
         //Обучение
         void train(IList<DataItem<double>> data);
+
+        //Вывести все веса всех нейронов
+        List<List<List<double>>> getAllWeights();
     }
 }
