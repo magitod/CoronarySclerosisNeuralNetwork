@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DataItem.cs" />
+    <Compile Include="Classes\Layer.cs" />
+    <Compile Include="Classes\LearningStrategy.cs" />
+    <Compile Include="Classes\NeuralNetwork.cs" />
+    <Compile Include="Classes\Neuron.cs" />
+    <Compile Include="Classes\SigmoidFunction.cs" />
+    <Compile Include="Interfaces\IFunction.cs" />
+    <Compile Include="Interfaces\ILayer.cs" />
+    <Compile Include="Interfaces\ILearningStrategy.cs" />
+    <Compile Include="Interfaces\IMetrics.cs" />
+    <Compile Include="Interfaces\INeuralNetwork.cs" />
+    <Compile Include="Interfaces\INeuron.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
