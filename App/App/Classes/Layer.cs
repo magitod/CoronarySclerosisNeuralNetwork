@@ -12,7 +12,9 @@ namespace App.Classes
         private double[] lastOutput;
 
         public double[] LastOutput { get { return lastOutput; } }
+
         public INeuron[] Neurons { get; }
+
         public int InputDimension { get; }
 
         public Layer(int countNeuron, int countInputs)

@@ -9,7 +9,7 @@ namespace App.Classes
 {
     class SigmoidFunction: IFunction
     {
-        public double Alpha{ get; set; }
+        public double Alpha { get; set; }
 
         public SigmoidFunction()
         {
@@ -30,7 +30,7 @@ namespace App.Classes
         public double computeFirstDerivative(double x)
         {
             double f = compute(x);
-            double firstDerivative =Alpha * f * (1 - f);
+            double firstDerivative = Alpha * f * (1 - f);
             return firstDerivative;
         }
     }
