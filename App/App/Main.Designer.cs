@@ -99,7 +99,6 @@
             this.Controls.Add(this.tab_neural_network);
             this.Name = "Main";
             this.Text = "Main";
-            this.Load += new System.EventHandler(this.Main_Load);
             this.tab_neural_network.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_train_selection)).EndInit();
