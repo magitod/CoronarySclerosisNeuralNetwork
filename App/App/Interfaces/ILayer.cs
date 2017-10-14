@@ -19,5 +19,7 @@ namespace App.Interfaces
 
         //Количество входных сигналов
         int InputDimension { get; }
+
+        int CountNeurons { get; }
     }
 }

@@ -10,6 +10,7 @@ namespace App.Classes
     class Neuron: INeuron
     {
         Random r = new Random();
+
         #region Свойства
         public double[] Weights { get; set; }
 
@@ -50,9 +51,11 @@ namespace App.Classes
 
         #endregion
 
-        public Neuron(int countInputs)
+        #region Конструкторы
+        public Neuron(int countInputs, IFunction activationFunction)
         {
             Weights = new double[countInputs];
+            ActivationFunction = activationFunction;
 
             //рандомайз начальных весов
             Bias = r.NextDouble();
@@ -62,5 +65,6 @@ namespace App.Classes
                 Weights[i] = r.NextDouble();
             }
         }
+        #endregion
     }
 }
