@@ -8,22 +8,38 @@ namespace App.Interfaces
 {
     interface INeuron
     {
-        //Веса
+        /// <summary>
+        /// Веса 
+        /// </summary>
         double[] Weights { get; set; }
 
-        //Свободный вес
+        /// <summary>
+        /// Свободный вес
+        /// </summary>      
         double Bias { get; set; }
 
-        //Вычислить состояние нейрона
+        /// <summary>
+        /// Вычислить состояние нейрона
+        /// </summary>
+        /// <param name="inputVector">Входной сигнал</param>
+        /// <returns>Состояние нейрона</returns>        
         double activate(double[] inputVector);
 
-        //Вычисление суммы входного сигнала
+        /// <summary>
+        /// Вычислить взвешенную сумму
+        /// </summary>
+        /// <param name="inputVector">Входной сигнал</param>
+        /// <returns>Взвешенная сумма</returns>
         double computeSum(double[] inputVector);
 
-        //Последнее состояние
+        /// <summary>
+        /// Последнее вычисленное состояние нейрона
+        /// </summary>
         double LastState { get; set; }
 
-        //Последняя сумма
+        /// <summary>
+        /// Последняя вычисленная взвешенная сумма нейрона
+        /// </summary>     
         double LastSum { get; set; }
 
         IList<INeuron> Childs { get; set; }

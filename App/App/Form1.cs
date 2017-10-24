@@ -25,7 +25,12 @@ namespace App
             NeuralNetwork network = new NeuralNetwork(configLayers, 4);
 
             double[] inputVector = { 0.5, 1, 0, 1 };
-            label1.Text = String.Format("Кол-во слоёв: {0}\r\nСлой 1 кол-во нейронов:{1}\r\nВыходной сигнал:{2}", network.CountLayers, network.countNeurons(1),network.computeOutput(inputVector)[0]);
+            label1.Text = String.Format(
+                "Кол-во слоёв: {0}\r\nСлой 1 кол-во нейронов:{1}\r\nВыходной сигнал:{2}", 
+                network.CountLayers, 
+                network.countNeurons(1),
+                network.computeOutput(inputVector)[0]
+            );
         }
     }
 }
